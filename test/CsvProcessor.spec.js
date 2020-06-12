@@ -32,10 +32,10 @@ describe('AutoFi CSV File Processor Test Suite', () => {
     // Arrange
     const inputFile = `${__dirname}/AutoFiTestData_001.csv`;
     const proc = new CsvProcessor(inputFile, config.get('outputSchema'));
-    console.log(__dirname);
 
     // Act
-
+    const ret = proc.parse();
+    
     // Expect
     expect(true).toBe(true);
   });
