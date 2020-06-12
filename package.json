@@ -9,12 +9,17 @@
   "scripts": {
     "test": "jest --env node --testPathIgnorePatterns config",
     "coverage": "jest --env node --coverage --testPathIgnorePatterns config",
-    "clean": "git clean -dfx --exclude=.env --exclude=.idea"
+    "clean": "git clean -dfx --exclude=.env --exclude=.idea",
+    "start": "node index.js"
   },
   "dependencies": {
     "config": "^3.3.1",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.7-alpha.3",
+    "fs-extra": "^9.0.1",
+    "http-status": "^1.4.2",
+    "nanoid": "^3.1.9"
   },
   "devDependencies": {
     "jest": "^26.0.1"

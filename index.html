@@ -1,0 +1,13 @@
+<html>
+<body>
+<form ref='uploadForm'
+      id='uploadForm'
+      action='http://localhost:5000/api/uploadcsv'
+      method='post'
+      encType="multipart/form-data">
+  <input type="file" name="csvFile" />
+  <input type="hidden" name="customerId" value="autofi-coding-challenge" />
+  <input type='submit' value='Upload!' />
+</form>
+</body>
+</html>

@@ -11,8 +11,12 @@ module.exports = {
   local: false,
   debug: false,
   port: process.env.PORT,
+  fileDestinationPath: '/usr/local/share/AutoFi',
+  fileInputFieldName: 'csvFile',
   fileUpload: {
-    fileSize: 50 * 1025 * 1024,
+    limits: {
+      fileSize: 50 * 1025 * 1024
+    },
     useTempFiles: true,
     tempFileDir: '/tmp/'
   }

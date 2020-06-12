@@ -4,6 +4,7 @@
 */
 
 const express = require('express');
+const fileUpload = require('express-fileupload');
 const config = require('./config');
 
 if (config.get('debug'))
@@ -14,6 +15,7 @@ if (config.get('debug'))
 
 // Create the server
 const app = express();
+app.use(fileUpload(config.get('fileUpload')));
 
 // Configure routes
 require('./src/routes/csvRoutes')(app);

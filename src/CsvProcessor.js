@@ -3,10 +3,15 @@
 * PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
 */
 
-const config = require('./config');
+const { isRequired } = require('./utils');
+const config = require('../config');
 
-class CsvProcessor {
-  constructor(opts) {
+module.exports = class CsvProcessor {
+  constructor(file = isRequired('file'), targetConfig = isRequired('targetConfig')) {
+    // The file to parse
+    this.file = file;
 
+    // The target output config
+    this.targetConfig = targetConfig;
   }
 }
