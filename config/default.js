@@ -11,6 +11,7 @@ module.exports = {
   local: false,
   debug: false,
   port: process.env.PORT,
+  providerNameInputField: 'customerId',
   fileDestinationPath: '/usr/local/share/AutoFi',
   fileInputFieldName: 'csvFile',
   fileUpload: {
@@ -19,5 +20,18 @@ module.exports = {
     },
     useTempFiles: true,
     tempFileDir: '/tmp/'
-  }
+  },
+  outputFileSuffix: '_processed.csv',
+  outputSchema: [
+    'UUID',
+    'VIN',
+    'Make',
+    'Model',
+    'Mileage',
+    'Year',
+    'Price',
+    'Zip Code',
+    'Create Date',
+    'Update Date'
+  ]
 };

@@ -4,4 +4,6 @@
 */
 
 module.exports = {
+  local: true,
+  fileDestinationPath: __dirname
 };

@@ -28,13 +28,15 @@ describe('AutoFi CSV File Processor Test Suite', () => {
     }
   });
 
-  test('Parse and transform', () => {
+  test('Parse and transform 001', () => {
     // Arrange
-    const x = new CsvProcessor();
+    const inputFile = `${__dirname}/AutoFiTestData_001.csv`;
+    const proc = new CsvProcessor(inputFile, config.get('outputSchema'));
+    console.log(__dirname);
 
     // Act
 
     // Expect
-    expect(x).toBe('Hi');
+    expect(true).toBe(true);
   });
 });
