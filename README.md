@@ -1,6 +1,6 @@
 # autofi-code-challenge
 
-After cloning the repository you will need to run yarn or npm to install the dependencies. Once that completes you should verify the configuration values are set appropriately based on the documentation below. Once satisfied with the configuration values you can start the server by running 'yarn start'.
+After cloning the repository you will need to run yarn or npm to install the dependencies. Once that completes you should verify the configuration values are set appropriately based on the documentation below, including the creation of the .env file. Once satisfied with the configuration values you can start the server by running 'yarn start'.
 Next you can load the index.html into a browser which will allow you to select a file to upload and process.
 
 Since the size of the csv file is potentially large I'm choosing to go with a stream solution for reading, parsing and transforming the csv file.
