@@ -7,3 +7,4 @@ In addition I will use an express plugin for handling the file upload.
 
 I've chosen to use the config module for application configuration as it is a popular, flexible and well supported module.
 
+For testing I've chosen Jest

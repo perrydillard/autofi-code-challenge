@@ -6,8 +6,17 @@
   "repository": "git@github.com:perrydillard/autofi-code-challenge.git",
   "author": "Perry Dillard",
   "license": "UNLICENSED",
+  "scripts": {
+    "test": "jest --env node --testPathIgnorePatterns config",
+    "coverage": "jest --env node --coverage --testPathIgnorePatterns config",
+    "clean": "git clean -dfx --exclude=.env --exclude=.idea"
+  },
   "dependencies": {
     "config": "^3.3.1",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1"
   }
 }

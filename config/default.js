@@ -9,5 +9,11 @@
 module.exports = {
   projectName: 'autofi-code-challenge',
   local: false,
-  debug: false
+  debug: false,
+  port: process.env.PORT,
+  fileUpload: {
+    fileSize: 50 * 1025 * 1024,
+    useTempFiles: true,
+    tempFileDir: '/tmp/'
+  }
 };
