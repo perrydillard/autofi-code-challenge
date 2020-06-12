@@ -16,7 +16,7 @@ module.exports = class CsvProcessor {
     this.file = file;
 
     // Build the output filename by simply appending a suffix
-    this.outputFile = `${file}_${config.get('outputFileSuffix')}`;
+    this.outputFile = `${file}${config.get('outputFileSuffix')}`;
 
     // The target output config
     this.targetSchema = targetSchema;
