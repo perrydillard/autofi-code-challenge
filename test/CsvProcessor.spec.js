@@ -25,7 +25,7 @@ describe('AutoFi CSV File Processor Test Suite', () => {
       const obj = new CsvProcessor('/tmp/uploaded.csv');
     } catch (ex) {
       // Expect
-      expect(ex.message).toBe('targetConfig is required');
+      expect(ex.message).toBe('targetSchema is required');
     }
   });
 
@@ -41,5 +41,59 @@ describe('AutoFi CSV File Processor Test Suite', () => {
     const f1 = fs.readFileSync(proc.outputFile);
     const f2 = fs.readFileSync(`${inputFile}_expected.csv`);
     expect(f1.toString()).toEqual(f2.toString());
+
+    // Cleanup
+    fs.remove(proc.outputFile);
+  });
+
+  test('Parse and transform 002', async () => {
+    // Arrange
+    const inputFile = `${__dirname}/AutoFiTestData_002.csv`;
+    const proc = new CsvProcessor(inputFile, config.get('outputSchema'));
+
+    // Act
+    const ret = await proc.parse();
+
+    // Expect
+    const f1 = fs.readFileSync(proc.outputFile);
+    const f2 = fs.readFileSync(`${inputFile}_expected.csv`);
+    expect(f1.toString()).toEqual(f2.toString());
+
+    // Cleanup
+    fs.remove(proc.outputFile);
+  });
+
+  test('Parse and transform 003', async () => {
+    // Arrange
+    const inputFile = `${__dirname}/AutoFiTestData_003.csv`;
+    const proc = new CsvProcessor(inputFile, config.get('outputSchema'));
+
+    // Act
+    const ret = await proc.parse();
+
+    // Expect
+    const f1 = fs.readFileSync(proc.outputFile);
+    const f2 = fs.readFileSync(`${inputFile}_expected.csv`);
+    expect(f1.toString()).toEqual(f2.toString());
+
+    // Cleanup
+    fs.remove(proc.outputFile);
+  });
+
+  test('Parse and transform 004', async () => {
+    // Arrange
+    const inputFile = `${__dirname}/AutoFiTestData_004.csv`;
+    const proc = new CsvProcessor(inputFile, config.get('outputSchema'));
+
+    // Act
+    const ret = await proc.parse();
+
+    // Expect
+    const f1 = fs.readFileSync(proc.outputFile);
+    const f2 = fs.readFileSync(`${inputFile}_expected.csv`);
+    expect(f1.toString()).toEqual(f2.toString());
+
+    // Cleanup
+    fs.remove(proc.outputFile);
   });
 });
