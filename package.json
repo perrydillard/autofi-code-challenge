@@ -17,7 +17,7 @@
     "csv-parser": "^2.3.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "express-fileupload": "^1.1.7-alpha.3",
+    "express-fileupload": "^1.1.9",
     "fs-extra": "^9.0.1",
     "http-status": "^1.4.2",
     "lodash": "^4.17.15",
