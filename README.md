@@ -46,8 +46,8 @@ The REST endpoint is /api/csvupload
   * The name of the input fields are configurable in the config/default.js file and should be self explanatory.
   
 .env file contents - Below are the values expected to be set
-NODE_ENV - Should be one of [test,development,production]
-PORT - The port for the Express server to listen on
+  * NODE_ENV - Should be one of [test,development,production]
+  * PORT - The port for the Express server to listen on
 
 ##### The development values I used were
 * NODE_ENV=development
