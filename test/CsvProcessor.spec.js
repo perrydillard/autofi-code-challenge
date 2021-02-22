@@ -29,7 +29,7 @@ describe('AutoFi CSV File Processor Test Suite', () => {
     }
   });
 
-  test('Parse and transform 001', async () => {
+  test('Parse and transform 001', async (done) => {
     // Arrange
     const inputFile = `${__dirname}/AutoFiTestData_001.csv`;
     const proc = new CsvProcessor(inputFile, config.get('outputSchema'));
@@ -43,10 +43,12 @@ describe('AutoFi CSV File Processor Test Suite', () => {
     expect(f1.toString()).toEqual(f2.toString());
 
     // Cleanup
-    fs.remove(proc.outputFile);
+    await fs.remove(proc.outputFile);
+
+    done();
   });
 
-  test('Parse and transform 002', async () => {
+  test('Parse and transform 002', async (done) => {
     // Arrange
     const inputFile = `${__dirname}/AutoFiTestData_002.csv`;
     const proc = new CsvProcessor(inputFile, config.get('outputSchema'));
@@ -60,10 +62,12 @@ describe('AutoFi CSV File Processor Test Suite', () => {
     expect(f1.toString()).toEqual(f2.toString());
 
     // Cleanup
-    fs.remove(proc.outputFile);
+    await fs.remove(proc.outputFile);
+
+    done();
   });
 
-  test('Parse and transform 003', async () => {
+  test('Parse and transform 003', async (done) => {
     // Arrange
     const inputFile = `${__dirname}/AutoFiTestData_003.csv`;
     const proc = new CsvProcessor(inputFile, config.get('outputSchema'));
@@ -77,10 +81,12 @@ describe('AutoFi CSV File Processor Test Suite', () => {
     expect(f1.toString()).toEqual(f2.toString());
 
     // Cleanup
-    fs.remove(proc.outputFile);
+    await fs.remove(proc.outputFile);
+
+    done();
   });
 
-  test('Parse and transform 004', async () => {
+  test('Parse and transform 004', async (done) => {
     // Arrange
     const inputFile = `${__dirname}/AutoFiTestData_004.csv`;
     const proc = new CsvProcessor(inputFile, config.get('outputSchema'));
@@ -94,6 +100,8 @@ describe('AutoFi CSV File Processor Test Suite', () => {
     expect(f1.toString()).toEqual(f2.toString());
 
     // Cleanup
-    fs.remove(proc.outputFile);
+    await fs.remove(proc.outputFile);
+
+    done();
   });
 });
